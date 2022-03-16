@@ -23,3 +23,4 @@ common JS (CJS) Modules VS Ecma script Modules (ECM)
 
 Int Questions:
 is Console.log in browswer and console.log in node same? (No, in browswe it is browser function, but node provide a debugging console similar to browswe c.log()  )
+Is NodeJS SingleThreded ot multi?   (it is single threaded, at a time one command will run)
