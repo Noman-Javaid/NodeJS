@@ -1,0 +1,25 @@
+CMDS:
+npm init
+npm i express
+npm i
+npm i -g nodemon
+
+=====> DevDependencies [dependencies while development]
+->npm install --save -dev nodemon [nodemon just during development]
+->npm uninstall nodemon 
+->npm uninstall express
+->npm install angular/cli
+
+
+=====>Imports
+const student = require("./second");
+=====>Module Wrapper
+(function (exports,require, module, __filename, __dirnamr){
+  _code here_
+})
+
+common JS (CJS) Modules VS Ecma script Modules (ECM)
+
+
+Int Questions:
+is Console.log in browswer and console.log in node same? (No, in browswe it is browser function, but node provide a debugging console similar to browswe c.log()  )
