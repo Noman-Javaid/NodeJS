@@ -1,3 +1,7 @@
+Not a programmig language
+Written in C++ C(8%) and javascript(92%)
+
+
 CMDS:
 npm init
 npm i express
@@ -17,10 +21,27 @@ const student = require("./second");
 (function (exports,require, module, __filename, __dirnamr){
   _code here_
 })
+common JS (CJS) Modules VS Ecma script Modules (ECM)s
 
-common JS (CJS) Modules VS Ecma script Modules (ECM)
 
+
+=====>NodeJS working process
+Event Loop{
+|--->CallStack-------->|  (it registers all functions inside it before execution of them)
+|    NodeAPI           |  (if any function dont relates to core JS then it will first come to NodeAPI then it will send to Callback Queue -> Like TimeOut function is not part of JS it is part of C++)
+|<---Callback Queue <--|  (the NodeApi functions will remain in callbackQueue untill the main function is present in callStack then they will sent to CallStack->so this is waiting area )
+}
+
+=====>EXPRESS JS
+npm install express
+
+=====>EJS Routing (embeded js)
+npm install ejs
 
 Int Questions:
 is Console.log in browswer and console.log in node same? (No, in browswe it is browser function, but node provide a debugging console similar to browswe c.log()  )
 Is NodeJS SingleThreded ot multi?   (it is single threaded, at a time one command will run)
+Is node Async or Sync?  (its Async, because if first function is waiting then the other will run autometically then first after that)
+what is 200(OK) 201(created) 404(Not Found) 500(Internal server error) 400 etc
+What is Buffer in nodeJS? (a Temporary memory locationto perform some operations)
+Explain architecture of nodeJS (check NodeJS Working process ie. eventLoop)
