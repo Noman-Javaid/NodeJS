@@ -5,6 +5,9 @@ const fs = require('fs')
 const path = require('path');
 const express = require('express');
 
+//Connection File
+const dbConnect = require('./mongodb')
+
 //Using Colors 
 // console.log("Hello Colors".red) //run command node .\index.js
 // console.log("Hello World I love You".bgBlue)
@@ -166,23 +169,47 @@ const express = require('express');
 
 //________________________________________________________________________________
 // MiddleWare
-const reqFilter = require('./middleware')
-const app = express();
-const pathname = path.join(__dirname, 'public');
-// app.use(reqFilter);    //will work at application levels
-const route = express.Router();
-route.use(reqFilter);
-route.get('/login', (req, res) => {
-    res.render(`login`)
-})
-app.get('/', (req, res) => {
-    res.sendFile(`${pathname}/index.html`)
-})
-route.get('/helpus', (req, res) => {
-    res.sendFile(`${pathname}/help.html`)
-})
-app.get('/aboutus', reqFilter, (req, res) => {  //will work at single corresponding route in which it will be mentioned
-    res.sendFile(`${pathname}/about.html`)
-})
-app.use('/',route);
-app.listen(4500)
+// const reqFilter = require('./middleware')
+// const app = express();
+// const pathname = path.join(__dirname, 'public');
+// // app.use(reqFilter);    //will work at application levels
+// const route = express.Router();
+// route.use(reqFilter);
+// route.get('/login', (req, res) => {
+//     res.render(`login`)
+// })
+// app.get('/', (req, res) => {
+//     res.sendFile(`${pathname}/index.html`)
+// })
+// route.get('/helpus', (req, res) => {
+//     res.sendFile(`${pathname}/help.html`)
+// })
+// app.get('/aboutus', reqFilter, (req, res) => {  //will work at single corresponding route in which it will be mentioned
+//     res.sendFile(`${pathname}/about.html`)
+// })
+// app.use('/',route);
+// app.listen(4500)
+
+
+
+
+
+// ========================================================================================================================
+// DATABASE CRUD FROM HERE
+
+// dbConnect().then((res)=>{  //method 1
+//     res.find().toArray().then((data)=>{
+//         console.log(data);
+//     })
+// })
+
+const getData = async ()=>{
+    let data = await dbConnect();
+    data = await data.find().toArray();
+    console.log(data);
+}
+getData();
+
+
+
+

@@ -24,6 +24,11 @@ const student = require("./second");
 common JS (CJS) Modules VS Ecma script Modules (ECM)s
 
 
+=====>MongoDB Configration
+npm i mongodb
+npm i mongoose
+
+
 
 =====>NodeJS working process
 Event Loop{
