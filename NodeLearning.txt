@@ -28,6 +28,15 @@ common JS (CJS) Modules VS Ecma script Modules (ECM)s
 npm i mongodb
 npm i mongoose
 
+=====>Uploading File 
+npm i multer
+
+=====>REPL
+Read, Evaluate, Print, Loop
+REPL will call when you give command "node" in CMD
+The runtime environment to run javascript (nodeJS) code in CMD is REPL
+___.editor command, to change cmd in editor mode (not every line of code will run on enter, like in normal REPL)
+___ctrl + D, to get out of editor mode
 
 
 =====>NodeJS working process

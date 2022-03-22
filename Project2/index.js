@@ -4,6 +4,7 @@ const data = require('./data')
 const fs = require('fs')
 const path = require('path');
 const express = require('express');
+const os = require('os')
 
 //Connection File
 const dbConnect = require('./mongodb')
@@ -203,13 +204,20 @@ const dbConnect = require('./mongodb')
 //     })
 // })
 
-const getData = async ()=>{
-    let data = await dbConnect();
-    data = await data.find().toArray();
-    console.log(data);
-}
-getData();
+// const getData = async ()=>{
+//     let data = await dbConnect();
+//     data = await data.find().toArray();
+//     console.log(data);
+// }
+// getData();
 
 
-
-
+//_______________________________________________________________________________________________________________________
+//OS Module
+// console.log(os)
+// console.log(os.arch())// Architecture of OS x64 or x32
+// console.log(os.freemem()/ (1024 * 1024)) // Free ram in Mbs
+// console.log(os.totalmem()/ (1024 * 1024)) // Total ram in Mbs
+// console.log(os.hostname()) //OS model
+// console.log(os.platform())//windows or MAC
+// console.log(os.userInfo())
